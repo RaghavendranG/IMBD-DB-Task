@@ -1,0 +1,27 @@
+//Creating a Movie table in the database
+-- create table Movie(Movie_id INT PRIMARY KEY, Movie_name TEXT, Director TEXT, Movie_genre TEXT, Image TEXT, 
+Video TEXT, Artist TEXT, Released_Year INT, RunTime(in min) INT); --
+
+//Creating a User table in the database
+-- create table User(User_id INT PRIMARY KEY, User_name TEXT); --
+
+//Creating a Review table in the database
+-- create table Review(Movie_id INT PRIMARY KEY, Review TEXT, User_name TEXT); --
+
+//Creating a Artist table in the database
+-- create table Artist(Sl_no INT, Artist_name TEXT, Gender TEXT, Movies_Acted TEXT,Roles_played TEXT, Artist_skill TEXT); --
+
+//Inserting new values to the table Movie
+INSERT INTO Movie values(1, "RRR", "Rajamouli", "Action,Thriller,Historical", "aaa", "bbb", "Ram Charan, JR Ntr, ALia BHatt", 2022, 120)
+
+//Inserting new values to the table User
+INSERT INTO User values(1, "Ram");
+
+//Inserting new values to the table Review
+INSERT INTO Review values(1, "Movie was extraoridnary","Ram");
+
+//Inserting new values to the table Artist
+INSERT INTO Artist values(1, "Ram Charan", "Male", "RRR", "Hero", "Actor");
+
+//Getting Movie,Review and User details based on the Movie_id
+-- select Review,User_name from Movie LEFT JOIN Review on Movie.Movie_id = Review.Movie_id -- 
